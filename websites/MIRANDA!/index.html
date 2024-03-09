@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <script src="code.js"></script>
+        <script src="functions.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="shortcut icon"
+            type="image/png"
+            href="miccaelavillamil.png"
+        />
+        <title>MIRANDA!</title>
+    </head>
+    <body>
+        <div id="backModal">
+            <div id="modal"></div>
+        </div>
+
+        <header>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#que">¿Quiénes somos?</a>
+                <a href="#discos">Discos</a>
+                <a href="#shows">Shows</a>
+                <a href="#integrantes">Integrantes</a>
+                <a href="#galeria">Galería de imágenes</a>
+            </nav>
+        </header>
+
+        <div id="content">
+            <div id="inicio">
+                <div id="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <h1>MIRANDA!</h1>
+            </div>
+
+            <div id="social">
+                <div></div>
+            </div>
+
+            <section>
+                <article id="que">
+                    <h2>¿Qué es Miranda!?</h2>
+                    <p>
+                        Miranda! es un dúo formado por los cantantes Alejandro
+                        Sergi y Juliana Gattas en el 2001. Sacudió los cimientos
+                        de la escena electro-pop argentina de comienzos de siglo
+                        con su estilo único, personal e inconfundible y ha
+                        cautivado al público con su inagotable producción de
+                        hits y melodías reconocidas en toda Latinoamérica y
+                        España. Con siete premios MTV, seis premios Gardel, dos
+                        Gaviotas de Plata, cuatro antorchas en el Festival Viña
+                        del Mar, dos nominaciones a los Latin Grammys, llevan
+                        vendidos más de 500.000 discos.
+                    </p>
+                </article>
+
+                <article id="discos">
+                    <h2>Discos</h2>
+                    <input
+                        type="text"
+                        placeholder="Busca una canción, año o album..."
+                        id="search"
+                    />
+
+                    <div id="discs"></div>
+
+                    <div id="openDiscos" class="oculto"></div>
+
+                    <div class="mas">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </article>
+
+                <article id="shows">
+                    <h2>Shows</h2>
+                    <select name="filterCity" id="filterCity"></select>
+
+                    <ul></ul>
+
+                    <div class="mas">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="openShows" class="oculto"></div>
+
+                    <div id="thanks" class="oculto">
+                        <p>¡Gracias por su compra!</p>
+                    </div>
+                </article>
+
+                <article id="integrantes">
+                    <h2>Integrantes</h2>
+                </article>
+
+                <article id="galeria">
+                    <h2>Galería</h2>
+                    <div id="slider"></div>
+                    <div id="grid"></div>
+                </article>
+            </section>
+        </div>
+
+        <footer>
+            <div>
+                <p>
+                    Diseño y programación de la página realizado por Micaela
+                    Villamil
+                </p>
+                <p>18/06/2021</p>
+            </div>
+            <div>
+                <p>Obligatorio 1, Programación 1.</p>
+                <p>Facultad de Comunicación y Diseño.</p>
+                <p>Universidad ORT Uruguay.</p>
+            </div>
+
+            <div>
+                <a href="../index.html">
+                    <img src="miccaelavillamil.png" alt="" />
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>

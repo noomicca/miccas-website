@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <script src="code.js"></script>
+        <link rel="icon" type="image/ico" href="logo.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Lo de Lalo</title>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="photos/logo.png" alt="" /></a>
+            <nav>
+                <a class="active" href="index.html">Inicio</a>
+                <a href="menu.html">Nuestro menú</a>
+                <a href="404.html">¿Quiénes somos?</a>
+            </nav>
+        </header>
+
+        <div id="load"></div>
+
+        <div class="content">
+            <h1>Lo de Lalo</h1>
+            <h2>Restaurante de comidas caseras</h2>
+            <a
+                title="Ir a Google Maps"
+                target="_blank"
+                href="https://www.google.com/maps/place/Lo+de+Lalo/@-34.7600168,-55.6790068,17z/data=!3m1!4b1!4m5!3m4!1s0x959ff76708270879:0x308aa4071a8b7364!8m2!3d-34.7600168!4d-55.6768181"
+                >La floresta - Costa Azul</a
+            >
+
+            <div class="sector">
+                <div id="destacar">
+                    <img
+                        src="photos/corazon.png"
+                        alt="Mesa con harina y una forma de corazón dibujada con el dedo."
+                    />
+                </div>
+
+                <div class="presentando">
+                    <img
+                        src="photos/manos.jpg"
+                        alt="Manos del equipo de trabajo del restaurante juntas."
+                    />
+                    <h4>Trabajo en equipo</h4>
+                    <p>
+                        Somos un equipo dedicado que ama lo que hace y busca
+                        traerte la mejor experiencia.
+                    </p>
+                </div>
+                <div class="presentando">
+                    <img
+                        src="photos/a-mano.png"
+                        alt="Ravioles abiertos, crudos, a media prepaación."
+                    />
+                    <h4>Hecho a mano</h4>
+                    <p>
+                        Platillos hechos a mano y con amor. Cada plato tiene su
+                        tiempo y dedicación.
+                    </p>
+                </div>
+                <div class="presentando">
+                    <img
+                        src="photos/once.png"
+                        alt="Una torta de festejo con 'once años' escrito a un lado con fondant."
+                    />
+                    <h4>Más de once años funcionando.</h4>
+                    <p>¡Ya nos conoces!</p>
+                </div>
+
+                <div id="especial">
+                    <img
+                        src="photos/paella-de-mariscos.png"
+                        alt="Plato de paella de mariscos"
+                    />
+
+                    <div id="textoespecial">
+                        <h4>Especialidad del día:</h4>
+                        <h3>Paella de Mariscos</h3>
+                        <p>
+                            La especialidad del día de hoy es esta exquisita
+                            paella de mariscos. Les contamos un poco que
+                            ingredientes tiene, esta hecha con arroz, un mix de
+                            mariscos, cebolla, tomate, morrón rojo, arvejas,
+                            perejil y ajo entre otros ingredientes especiales.
+                            Como todos nuestros platillos, si desean modificar
+                            de algún ingrediente puntual coméntenlo en la
+                            sección de notas de nuestro delivery o pregunten
+                            presencialmente a uno de nuestros meseros.
+                        </p>
+                        <a title="Menú" href="menu.html">Ver todo el menú</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="galeria">
+            <img
+                id="uno"
+                src="photos/grid-1.png"
+                alt="Mesa para dos, de fondo hay grandes plantas verdes y se ve un poco las casas y autos más al fondo. "
+            />
+
+            <div id="dos">
+                <a title="Menú" href="menu.html">Delivery</a>
+            </div>
+
+            <img
+                id="tres"
+                src="photos/grid-3.png"
+                alt="Plato de cazuela de mondongo."
+            />
+
+            <div id="cuatro">
+                <div>
+                    <h2>¡Pedí para llevar!</h2>
+                    <h3>Te llevamos la orden a casa.</h3>
+                </div>
+            </div>
+
+            <img
+                id="cinco"
+                src="photos/grid-5.png"
+                alt="Plato de Causa Peruana"
+            />
+
+            <img
+                id="seis"
+                src="photos/grid-6.png"
+                alt="Plato de arroz con leche. Tiene canela arriba espolvoreada en forma de corazón."
+            />
+
+            <form>
+                <h2>
+                    ¿Quieres recibir noticias sobre ofertas, descuentos y
+                    delivery promos por mail?
+                </h2>
+
+                <input
+                    title="*Ingrese su email (Obligatorio)."
+                    type="email"
+                    name="mail"
+                    placeholder="Email"
+                    required
+                />
+                <input type="submit" value="ENVIAR" />
+                <label for="sorteos"
+                    ><input
+                        id="sorteos"
+                        type="checkbox"
+                        name="check"
+                        checked
+                    />¡También quiero entrar en sorteos!</label
+                >
+            </form>
+        </div>
+
+        <footer>
+            ¡Siguenos en nuestras redes sociales!
+            <a
+                target="_blank"
+                href="https://www.facebook.com/LodeLaloLaFloresta/"
+                ><img src="REDES/FB.png" alt="Facebook"
+            /></a>
+            <a
+                target="_blank"
+                href="https://www.instagram.com/lodelalorestaurante/?hl=es-la"
+                ><img src="REDES/Instagram.png" alt="Instagram"
+            /></a>
+            <a target="_blank" href="https://vm.tiktok.com/ZMeGFehvJ/"
+                ><img src="REDES/tiktok.png" alt="TikTok"
+            /></a>
+            <a href="../index.html"><img src="../MICCALOGO.svg" alt="" /></a>
+        </footer>
+    </body>
+</html>

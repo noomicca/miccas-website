@@ -1,0 +1,286 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+
+    background:url(IMG/bg_sanducherie_reservas.jpg) #1b1b1b6c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-blend-mode: overlay;
+
+    height: 90vh;
+    
+}
+header{
+    position: fixed;
+
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    padding: 1em;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #01898F, #01888f00);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 0 1em;
+    border: solid 2px white;
+}
+nav a:hover, nav a:focus{
+    color: #FFA100;
+    border: solid 2px #FFA100;
+}
+header img{
+    width: 5em;
+}
+#burger{
+    display: none;
+}
+footer{
+    align-items: center;
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer p{
+    text-align: left;
+    padding: unset;
+    color: white;
+    font-weight: 300;
+}
+footer div{
+    width: 30%;
+    box-sizing: border-box;
+    padding: 0 1em;
+    border-left: solid white 2px;
+}
+footer div:nth-child(1){
+    border: unset;
+    width: 15%;
+    padding: 0 1em;
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    color: white;
+}
+h2{
+    color: #FFA100;
+    font-size: 6em;
+    font-weight: 900;
+}
+p{
+    text-align: justify;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 1em 0;
+
+}
+#titulo{
+    width: 85vw;
+    left: 7.5vw;
+    top: 25vh;
+    position: relative;
+}
+
+
+#content{
+    background: #1B1B1B;
+    min-height: 10vh;
+    height: auto;
+    
+    margin-top: 60vh;
+    padding: 4em 6em;
+    box-sizing: border-box;
+}
+#content>div{
+    margin: auto;
+    background: whitesmoke;
+
+    box-sizing: border-box;
+    padding: 2em;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: relative;
+}
+#spritesheet{
+    bottom: 2em;
+    right: 2em;
+    position: absolute;
+
+    display: inline-block;
+    width: 119px;
+    height: 165px;
+    background: url(spritesheet.png);
+    background-position-x:0;
+    background-position-y:0;
+    animation: animando 0.5s steps(24) 1s infinite alternate;
+
+}
+@keyframes animando{
+    0%{
+        background-position-x:0;
+    }
+    100%{
+        background-position-x:-2856px;
+    }
+} 
+
+
+
+
+#content>div>div{
+    width: 56%;
+}
+video{
+    width: 35%;
+}
+
+
+
+
+/* TABLET */
+
+@media all and (max-width:1024px){
+    #spritesheet{
+        bottom: -3em;
+        right: -3em;
+}
+}
+@media all and (max-width:768px){
+    #spritesheet{
+        bottom: -8em;
+        right: -3em;
+}
+    body{
+        font-size: 0.8em;
+    }
+    footer div:nth-child(1){
+        text-align: center;
+        width: 100%;
+    }
+    footer img{
+        width: 20%;
+    }
+    footer div{
+        width: 45%;
+    }
+} 
+
+/* PHONE */
+
+@media all and (max-width:610px){
+    #spritesheet{
+        bottom: 45em;
+        right: 1em;
+    }
+
+    .open{
+        right: 0px;
+    }
+    
+    #burger{
+        display: block;
+        z-index: 11;
+        cursor: pointer;
+        border: solid white 3px;
+        border-radius: 10em ;
+
+        box-sizing: border-box;
+        width: 4em;
+        height: 4em;
+    }
+    #burger span:nth-child(1){
+        margin-top: 1em;
+    
+    }
+    #burger span{
+        height: 0.2em;
+        width: 2.5em;
+        background-color: white;
+        display: block;
+        margin: auto;
+        margin-top: 0.5em;
+        border-radius: 10px;
+    
+        transform-origin: center;
+        transition: 0.3s;
+    }
+    .cruz{
+        border: solid #FFA100 3px !important;
+    }
+    .cruz span:nth-of-type(1){
+        background-color: #FFA100 !important;
+        transform: translateY(10px) rotateZ( 45deg);
+    }
+    .cruz span:nth-of-type(2){
+        opacity: 0;
+    }
+    .cruz span:nth-of-type(3){
+        background-color: #FFA100 !important;
+        transform: translateY(-10px) rotateZ( -45deg);
+    
+    }
+
+    
+
+
+    #content>div{
+        font-size: 0.5em;
+    }
+    #content{
+        
+    padding: 2em;
+    }
+    h1{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 3.3em;
+    }
+
+    nav{
+        z-index: 1;
+
+
+        position: absolute;
+        top: 0;
+        right: -200vw;
+        transition: 0.3s;
+        width: 100vw;
+        height: 100vh;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        
+        background: #0d0d0dc5;
+        padding:  0 0.5em ;
+        padding-top: 5em;
+        box-sizing: border-box;
+    }
+    nav a:nth-child(1){
+        margin-top: 2em;
+    }
+    nav a{
+        margin-top: 1em;
+        font-size: 2em;
+    }
+}

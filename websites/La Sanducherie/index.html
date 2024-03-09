@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <title>La Sanducherie</title>
+    </head>
+    <body>
+        <header>
+            <img src="logo.svg" alt="" />
+            <div id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <a href="#titulo">Inicio</a>
+                <a href="#content">Carta</a>
+                <a href="#content">PedidosYa</a>
+                <a href="#down">Contácto</a>
+            </nav>
+        </header>
+
+        <div id="titulo">
+            <h1>Les damos la bienvenida a</h1>
+            <img src="LA-SANDUCHERIE.svg" alt="" />
+        </div>
+        <div id="content">
+            <div>
+                <video
+                    src="instastory.mp4"
+                    preload="auto"
+                    autoplay
+                    loop
+                    muted
+                ></video>
+                <div>
+                    <h2>!HOLA¡</h2>
+                    <p>
+                        Te invitamos a recorrer el mundo desde Madrid con
+                        nuestra variada carta de sándwiches de autor e
+                        inspiración internacional, todos acompañados con patatas
+                        trufadas. Disfruta de animadas noches entre amigos con
+                        nuestra selección de cócteles.
+                    </p>
+                </div>
+                <span id="spritesheet"></span>
+            </div>
+
+            <footer id="down">
+                <div>
+                    <a href="../index.html">
+                        <img src="MICCARecurso.svg" alt="" />
+                    </a>
+                </div>
+                <div>
+                    <p>Obligatorio 2, Diseño Digital 5.</p>
+                    <p>Facultad de Comunicación y Diseño.</p>
+                    <p>Universidad ORT Uruguay.</p>
+                </div>
+                <div>
+                    <p>Diseño de la página realizado por Micaela Villamil.</p>
+                    <p>15/07/2021</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
+<script>
+    $(document).ready(Inicio);
+
+    function Inicio() {
+        $("#burger").click(function () {
+            $("nav").toggleClass("open");
+            $(this).toggleClass("cruz");
+            $("#fondoObscuro").toggleClass("open");
+        });
+        $("nav a").click(function () {
+            $("nav").toggleClass("open");
+            $("#burger").toggleClass("cruz");
+            $("#fondoObscuro").toggleClass("open");
+        });
+    }
+</script>

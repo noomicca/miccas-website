@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="miccaStyle.css" />
+        <title>Welcome to Micca's Portfolio!</title>
+    </head>
+
+    <!-- ----------BODY---------- -->
+
+    <body id="english">
+        <nav class="mic-fl-ri mic-fl-col mic-fixed mic-nav-invisible">
+            <a href="#whoami" class="mic-mainSections mic-white"><p>Who?</p></a>
+            <a href="#whatdoido" class="mic-mainSections mic-white"
+                ><p>What?</p></a
+            >
+            <a href="#ilustration" class="mic-secSections mic-white"
+                ><p>Ilustration</p></a
+            >
+            <a href="#web" class="mic-secSections mic-white"
+                ><p>Web Design</p></a
+            >
+            <a href="#audiovisual" class="mic-secSections mic-white"
+                ><p>Audio-Visual</p></a
+            >
+
+            <a href="#contact" class="mic-mainSections mic-white"
+                ><p>Contact me!</p></a
+            >
+        </nav>
+        <header id="mainheader" class="mic-fixed mic-fl-ri">
+            <button id="menu" type="button" class="mic-btn-round mic-fl-ce">
+                <img src="svg/menu-cirlce.svg" alt="Menú" />
+            </button>
+        </header>
+
+        <!-- ----------TITLE---------- -->
+
+        <div class="title mic-sticky mic-black mic-fl-ce mic-fl-col">
+            <a href="index.html">
+                <div class="fancyTitle">
+                    <h1>micca</h1>
+                    <h1 aria-hidden="true">micca</h1>
+                </div>
+            </a>
+        </div>
+
+        <!-- ----------CONTENT---------- -->
+
+        <div class="content mic-non-sticky mic-black mic-fl-ce mic-fl-col">
+            <section id="whoami" class="mic-black mic-fl-ce mic-fl-col">
+                <p>My name is</p>
+                <h3>Micaela Villamil</h3>
+                <p>
+                    I'm a Multimedia Bachelor's student in my third year at ORT
+                    University, Uruguay.
+                </p>
+                <div class="me">
+                    <div class="coin">
+                        <div class="tails"></div>
+                        <div class="heads"></div>
+                    </div>
+                </div>
+
+                <p>
+                    I can cover a wide range of mediums, from working with
+                    website frontend coding to audio-visual pieces or comissions
+                    of custom portraits and ilustration, I can adapt myself
+                    quickly to new needs you might have.
+                </p>
+            </section>
+            <section>
+                <h3>Skills</h3>
+                <div class="skills mic-fl-ce mic-fl-wrap">
+                    <a href="#ilustration" class="mic-btn-window mic-white">
+                        <h4 class="windowTitle">Design</h4>
+                        <p>100%</p>
+                        <div class="skillBar"></div>
+                        <ul class="mic-fl-ce mic-fl-wrap">
+                            <li>Figma</li>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>Blender</li>
+                            <li>3D Max</li>
+                            <li>Cinema 4D</li>
+                        </ul>
+                    </a>
+                    <a href="#audiovisual" class="mic-btn-window mic-white">
+                        <h4 class="windowTitle">audiovisual</h4>
+                        <p>100%</p>
+                        <div class="skillBar"></div>
+                        <ul class="mic-fl-ce mic-fl-wrap">
+                            <li>Premiere Pro</li>
+                            <li>After Effects</li>
+                            <li>DaVinci Resolve</li>
+                            <li>Reaper</li>
+                            <li>Adobe Audition</li>
+                        </ul>
+                    </a>
+                    <a href="#web" class="mic-btn-window mic-white">
+                        <h4 class="windowTitle">Frontend</h4>
+                        <p>100%</p>
+                        <div class="skillBar skillHalf"></div>
+                        <ul class="mic-fl-ce mic-fl-wrap">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                            <li>APIs</li>
+                            <li>Boostrap</li>
+                        </ul>
+                    </a>
+                </div>
+            </section>
+            <section id="whatdoido">
+                <h3>Multimedia Design</h3>
+                <p>
+                    Being a multimedia designer means knowing how to adapt, not
+                    having fear of change, innovate in new ways of communication
+                    and learn to transform the message through design into new
+                    media.
+                </p>
+            </section>
+            <section id="ilustration">
+                <h3>ilustration</h3>
+                <div class="grid"></div>
+                <p>For more check out my Instagram!</p>
+                <p>@noomicca</p>
+            </section>
+            <section id="web">
+                <h3>Web Design</h3>
+                <p>Websites that I have designed and codded:</p>
+                <div id="webBody" class="mic-fl-ce"></div>
+            </section>
+            <section id="audiovisual">
+                <h3>Audio Visual</h3>
+                <p>Audio-visual projects that I have done:</p>
+
+                <ul class="slider"></ul>
+            </section>
+            <section id="contact">
+                <div id="thankYouForm">
+                    <span>
+                        <h2>Mail succesfully send.</h2>
+                        <h3>Thank you!</h3>
+                    </span>
+                </div>
+                <h3>Contact me!</h3>
+                <p>You can connect with me through any of my social media :)</p>
+                <form
+                    onsubmit="formEvent()"
+                    id="contactForm"
+                    action="https://formsubmit.co/micaelavillamil200@gmail.com"
+                    method="post"
+                >
+                    <input
+                        type="text"
+                        name="name"
+                        title="name"
+                        placeholder="Name"
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="e-mail"
+                        required
+                    />
+                    <textarea
+                        required
+                        name="msg"
+                        id="msg"
+                        cols="30"
+                        rows="10"
+                        placeholder="Message..."
+                    ></textarea>
+
+                    <button id="submitForm" type="submit" class="mic-black">
+                        Send
+                    </button>
+
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="http://127.0.0.1:5500/inicio.html"
+                    />
+                </form>
+                <div>
+                    <h4 id="time">00:00:00</h4>
+                    <p>Ciudad de la Costa, Uruguay</p>
+                </div>
+            </section>
+            <footer class="mic-fl-ce">
+                <div class="socials mic-fl-ce">
+                    <a
+                        class="mic-btn-round mic-fl-ce"
+                        href="https://www.instagram.com/noomicca/"
+                        target="_blank"
+                        rel="noopener"
+                        ><img
+                            src="svg/instagram-circle.svg"
+                            alt="Instagram link"
+                    /></a>
+                    <a
+                        class="mic-btn-round mic-fl-ce"
+                        href="https://www.youtube.com/channel/UCdwNruW4SB1picDh6IqDhlg"
+                        target="_blank"
+                        rel="noopener"
+                        ><img src="svg/youtube-circle.svg" alt="Youtube link"
+                    /></a>
+                    <a
+                        class="mic-btn-round mic-fl-ce"
+                        href="https://www.linkedin.com/in/miccaelavillamil/"
+                        target="_blank"
+                        rel="noopener"
+                        ><img src="svg/linkedin-circle.svg" alt="Linkedin link"
+                    /></a>
+                </div>
+                <p>micaelavillamil200@gmail.com</p>
+            </footer>
+        </div>
+    </body>
+
+    <!-- ----------SCRIPTS---------- -->
+
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+    <script src="arrays.js"></script>
+    <script src="code.js"></script>
+    <script src="app.js"></script>
+</html>

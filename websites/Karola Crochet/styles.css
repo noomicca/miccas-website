@@ -1,0 +1,695 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: #6a2984;
+}
+nav{
+    position: absolute;
+    top: 0;
+    right: -200vw;
+    transition: 0.3s;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    
+    background: #0d0d0dc5;
+    padding:  0 0.5em ;
+    padding-top: 5em;
+    box-sizing: border-box;
+}
+nav a{
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+#logo{
+    width: fit-content;
+    height: fit-content;
+    font-size: unset;
+    color: unset;
+    background:unset;
+    margin: unset;
+    padding: unset;
+    border: unset;
+}
+
+/*
+Llamo a los links "a" especificamente por su contenedor porque 
+al subir la página al host que utilizo, la marca de agua toma los estilos 
+que le doy a los "a" generales, asi que evito eso llamandolos por su contenedor.
+*/
+#content a, #inicio a,nav a , input[type="submit"]{
+    font-size: 1.3em;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+
+    color:  white;
+    background: #6a2984;
+    margin: 0.4em 0;
+    padding: 0.5em 1em;
+    border: unset;
+    border-bottom: 2px solid white;
+}
+#content a:hover, #inicio a:hover,nav a:hover , input[type="submit"]:hover{
+    color:  #6a2984;
+    background: white;
+    border-bottom: 2px solid #6a2984;
+}
+#content a:focus, #inicio a:focus,nav a:focus , input[type="submit"]:focus{
+    color:  #CFB7F2;
+    background: white;
+    border-bottom: 2px solid #CFB7F2;
+}
+
+footer a{
+    font-size: 1em;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    width: fit-content;
+    
+    padding: 0 0.5em;
+    color:  white;
+    margin: 0.2em 0;
+    border: unset;
+}
+h1{
+    padding: 0.1em 0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 4px 4px #6a2984;
+}
+h2{
+    width: 100%;
+    color: white;
+    background-color: #6a2984;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+h3{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: #6a2984;
+    padding: 0.3em 0;
+    border-bottom: solid 1px #6a2984;
+}
+p{
+    color: #0D0D0D;
+}
+
+
+
+
+#fondo{
+    background: #6a2984 url(IMGS/muniequias-two.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    width: 100%;
+    height:100vh;
+}
+#menu{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background: linear-gradient(to bottom, #0D0D0D, #0d0d0d15);
+    box-sizing: border-box;
+    padding: 0.3em 0.5em;
+    width: 100%;
+}
+#menu img{
+    border-radius: 100%;
+    background: #6a2984;
+    width: 4em;
+}
+
+.open{
+    right: 0px;
+}
+
+#burger{
+    z-index: 11;
+    cursor: pointer;
+    border: solid #6a2984 3px;
+    border-radius: 10em ;
+    background-color: #6a2984;
+    
+    box-sizing: border-box;
+    width: 4em;
+    height: 4em;
+}
+#burger span:nth-child(1){
+    margin-top: 1em;
+
+}
+#burger span{
+    height: 0.2em;
+    width: 2.5em;
+    background-color: white;
+    display: block;
+    margin: auto;
+    margin-top: 0.5em;
+    border-radius: 10px;
+
+    transform-origin: center;
+    transition: 0.3s;
+}
+.cruz{
+    border: solid #CFB7F2 3px !important;
+    background: #CFB7F2 !important;
+}
+.cruz span:nth-of-type(1){
+    background-color: #6a2984 !important;
+    transform: translateY(10px) rotateZ( 45deg);
+}
+.cruz span:nth-of-type(2){
+    opacity: 0;
+}
+.cruz span:nth-of-type(3){
+    background-color: #6a2984 !important;
+    transform: translateY(-10px) rotateZ( -45deg);
+
+}
+
+
+
+
+#inicio{
+    margin: auto;
+    text-align: justify;
+    padding: 1em;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    
+    position: absolute;
+    top: 25vh;
+    height: 18em;
+    width:90vw;
+    left: 5vw;
+    
+    background:linear-gradient(to top left, #6a2984, #b7ccf2);
+    background-blend-mode: multiply;
+    border-bottom: white solid 4px;
+}
+#inicio h2{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+    color: #6a2984;
+    background-color: rgba(255, 255, 255, 0.596);
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#inicio a{
+    color:  #6a2984;
+    background: white;
+    border-bottom: 1px solid #6a2984;
+}
+#inicio p{
+    color: white;
+}
+#content{
+    background: #CFB7F2 url(IMGS/hip-square.png);
+    background-blend-mode: multiply;
+    border-bottom: white solid 2px;
+
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    padding-bottom: 2em;
+}
+#content > div{
+    padding: 1em 0;
+}
+section{
+    width: 100%;
+    padding: 0 0.5em;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+article{
+    display: none;
+    overflow: hidden;
+    background: #6a2984;    
+    position: relative;
+    height: 50vh;
+    
+    width: 100%;
+    margin: 0.5em 0;
+}
+article img{
+    width: 100%;
+    object-fit: cover;
+}
+article > div{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    bottom: 0;
+    height: 60%;
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    padding: 0 1em;
+}
+article > div > p{
+    font-size: 1.2em;
+    padding: 0.3em 0;
+    height: 4.5em;
+
+    overflow-y: scroll;
+}
+article > div > strong{
+    color: #6a2984;
+    font-size: 1em;
+    padding: 1em 0;
+}
+article:nth-child(1), article:nth-child(2), article:nth-child(3){
+    display: block;
+}
+#varios{
+    display: grid;
+    gap: 2px;
+    height: fit-content;
+}
+#varios > div{
+    width: 100%;
+    height: 10em;
+    background-color: #6a2984;
+    position: relative;
+}
+#varios div h2{
+    font-size: 1.5em;
+    position: absolute;
+    width: auto;
+    background:#6a2984b4;
+    padding: 0.3em;
+}
+
+
+#varios >div:nth-child(2) h2{
+    bottom: 8px;
+    right: 8px;
+}
+#varios >div:nth-child(2){
+    background: url(IMGS/cebras-smol.jpg);
+    background-size: cover;
+}
+
+#varios >div:nth-child(3) h2{
+    left: 8px;
+    top: 8px;
+}
+#varios >div:nth-child(3){
+    background: url(IMGS/oveja.jpg);
+    background-size: cover;
+}
+
+#varios >div:nth-child(1) h2{
+    left: 8px;
+    bottom: 8px;
+}
+#varios >div:nth-child(1){
+    background: url(IMGS/muniequias.jpg);
+    background-size: cover;
+}
+
+
+
+
+#mapa{
+    outline: #6a2984 solid 4px;
+    width: 100%;
+    height: 60%;
+    margin: 0.8em 0;
+}
+#donde{
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    text-align: justify;
+    box-sizing: border-box;
+}
+#donde div p{
+    margin: 1em 0;
+    color: white;
+    background: #6a298483;
+    box-sizing: border-box;
+    padding: 0.5em;
+}
+#donde div{
+    padding-bottom: 3em;
+    width: 100%;
+    box-sizing: border-box;
+
+    position: relative;
+}
+#donde div a{
+    position: absolute;
+    margin: unset;
+    bottom: 0;
+    left: 0;
+}
+#donde div h2{
+    display: none;
+}
+
+#inscript img{
+    display: none;
+}
+form{
+    height: 100%;
+    width: 100%;
+    margin: 1em 0;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+select, input, option{
+    color: #0D0D0D;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.5em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+label[for="terms"]{
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    
+    color: white;
+    background-color: #6a298483;
+    font-size: 0.8em;
+    padding: 0.5em 0.5em;
+    margin: 0.5em 0;
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    margin: unset;
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border: solid 2px white;
+    position: relative;
+}
+input[type="checkbox"]:checked{
+    border: solid 2px #6a2984;
+    background-color: #6a2984;
+}
+input[type="checkbox"]:checked::after{
+    content: '\2714';
+	font-size: 12px;
+    position: absolute;
+    bottom: 1px;
+    right: 2.5px;
+    color: white;
+}
+
+footer{
+    
+    position: relative;
+    background: #6a2984;
+    padding: 0.3em;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer div:nth-child(1){
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+footer img{
+    padding: 0.3em;
+    display: inline-block;
+    width: 3em;
+}
+
+
+
+
+
+/*-----------------------------*/
+
+
+
+
+
+@media all and (min-width:768px){
+    footer{
+        padding: 0.5em 10em;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    footer div:nth-child(1){
+        border: unset;
+    }
+    footer div{
+        border-left: solid 2px white;
+        justify-content: stretch;
+        align-items: flex-start;
+    }
+
+    #fondo{
+        background:#0D0D0D url(IMGS/IMG_3616.JPG);
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+        width: 100%;
+        height:100vh;
+    }
+    #inicio{
+        top: 15%;
+        height: fit-content;
+        width:50vw;
+        left: 25vw;
+    }
+
+    nav a{
+        font-size: 1.8em;
+    }
+
+
+
+
+
+
+    section{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    article:nth-child(4), article:nth-child(5), article:nth-child(6), article:nth-child(7){
+        display: block;
+    }
+    article{
+        width: 32%;
+        height: 20em;
+    }
+    article div{
+        height: 60%;
+    }
+    article:nth-child(1), article:nth-child(7){
+        width: 66%;
+    }
+
+
+
+    #varios{
+        grid-template-columns: 1fr 2.5fr;
+    }
+    #varios div{
+        background-position: center !important;
+    }
+    #varios div h2{
+        font-size: 1.8em;
+    }
+    #varios > div:nth-child(1){
+        grid-row: 1/3;
+        height: 100%;
+        background-image: url(IMGS/muniequias-two.jpg);
+    }
+
+
+
+    #mapa{
+        width: 50%;
+        height: 100%;
+        margin: 0 0.8em ;
+    }
+    #donde{
+        height: 20em;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    #donde a{
+        font-size: 1.8em;
+    }
+    #donde div{
+        width: 50%;
+        height: 100%;
+    }
+    #donde h2{
+        display:none;
+    }
+    #donde div h2{
+        width: 100%;
+        display: block;
+    }
+
+
+    form{
+        flex-direction: row;
+    }
+    select, input{
+        width: 48%;
+    }
+    input[type="submit"]{
+        margin: 0 20%;
+        width: 20%;
+    }
+}
+
+@media all and (min-width:1024px){
+    #fondo{
+        background: #6a2984 url(IMGS/fondo-desk.jpg);
+        background-size: cover;
+        background-position: top left;
+
+    }
+
+    #burger{
+        display: none;
+    }
+    nav{
+        top: 0;
+        right: 0;
+        width: fit-content;
+        height: 10vh;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        
+        background: unset;
+        padding:  0 0.5em ;
+    }
+    nav a{
+        font-size: 1.5em;
+        margin: 0 0.5em;
+    }
+    #menu img{
+        margin-left: 0.3em;
+        width: 4em;
+    }
+    #content > div{
+        margin: auto;
+        max-width: 90%;
+    }
+    article div p{
+        overflow-y: hidden;
+    }
+    #inicio{
+        top: 25vh;
+        height: 45vh;
+        width:30vw;
+        left: 5vw;
+    }
+    #varios{
+        height: 30em;
+    }
+    #varios div{
+        height: 100%;
+    }
+    #donde{
+        height: 60vh;
+    }
+    #donde div{
+        margin: unset;
+    }
+
+    #mapa{
+        width: 50%;
+        height: 100%;
+        margin: 0 0.8em ;
+    }
+    #inscript{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #inscript img{
+        display: block;
+        width: 28%;
+        margin: 1em 0;
+        border: solid 4px #6a2984;
+        box-sizing: border-box;
+
+    }
+    #inscript form{
+        width: 70%;
+    }
+    select, input{
+        width: 30%;
+    }
+    input[type="submit"]{
+        width: unset;
+    }
+
+    footer div:nth-child(1){
+        width: unset;
+    }
+
+    footer {
+        flex-direction: row-reverse;
+    }
+}
