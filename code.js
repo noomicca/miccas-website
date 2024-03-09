@@ -145,11 +145,10 @@ function menuEvent() {
 }
 function checkWindowWith(e) {
     if (e >= 992) {
-        $menu.removeEventListener("click", hearMenu);
-        $nav.removeEventListener("click", navAnimation);
         $nav.classList.remove("mic-slideInLeft");
         $nav.classList.remove("mic-slideOutLeft");
         $nav.classList.remove("mic-nav-invisible");
+        $menu.addEventListener("click", hearMenu);
     } else {
         $menu.addEventListener("click", hearMenu);
     }

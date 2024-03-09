@@ -732,11 +732,11 @@ ul.slider li iframe {
 
 @media only screen and (min-width: 992px) {
     nav {
-        flex-direction: row;
+        flex-direction: row !important;
         height: unset;
         background: linear-gradient(0deg, transparent 0%, var(--black) 100%);
 
-        align-items: center;
+        align-items: center !important;
         justify-content: center !important;
         padding: 1em 0;
     }
