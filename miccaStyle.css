@@ -305,7 +305,7 @@ button[type="submit"]:active {
 
     position: relative;
     display: flex;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .col {
     flex: 1;
@@ -588,7 +588,11 @@ ul.slider li iframe {
 
 #webBody {
     margin: 3em 1em;
+    margin-top: unset;
     flex-wrap: wrap;
+}
+#webBody .mic-webCard:first-child {
+    margin-top: 2.5em;
 }
 .mic-webCard {
     position: relative;
@@ -750,6 +754,12 @@ ul.slider li iframe {
 /*------MEDIA BREAKPOINTS------*/
 
 @media only screen and (min-width: 992px) {
+    #webBody .mic-webCard:first-child {
+        margin-top: 4em;
+    }
+    .content {
+        max-width: 1500px;
+    }
     nav {
         flex-direction: row !important;
         height: unset;
@@ -802,5 +812,34 @@ ul.slider li iframe {
         top: calc(56vh + 1em);
 
         color: var(--purple);
+    }
+    p {
+        font-size: 1.15em;
+        margin: auto;
+        max-width: 500px;
+        padding: 0 1em;
+    }
+    #quiensoy > div,
+    #whoami > div {
+        width: 45%;
+    }
+    #quiensoy,
+    #whoami {
+        max-width: 1200px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+    }
+    #quiensoy > div:last-child {
+        margin-top: -22%;
+    }
+
+    #whoami > div:last-child {
+        margin-top: -25%;
+    }
+    #quiensoy > div:first-child,
+    #whoami > div:first-child {
+        margin-top: 11%;
     }
 }
