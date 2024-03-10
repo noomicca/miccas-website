@@ -81,7 +81,7 @@ function saveWebCards(e) {
             <p>
             ${e.desc}
             </p>
-            <p>
+            <p class="mic-bold">
             ${e.warning}
             </p>
             </a><img src="${e.img}" alt="" />
@@ -203,8 +203,8 @@ function printEngSlider(e) {
             allowscriptaccess="always" 
             allowfullscreen
         ></iframe>
-        <h4>${descVideosEng[e].title}</h4>
-        <p>${descVideosEng[e].text}</p>
+        <h4 class="mic-bold">${descVideosEng[e].title}</h4>
+        <p class="mic-light">${descVideosEng[e].text}</p>
         </li>
         
         <div class="arrows">
@@ -233,8 +233,8 @@ function printEspSlider(e) {
             allowscriptaccess="always" 
             allowfullscreen
         ></iframe>
-        <h4>${descVideosEsp[e].title}</h4>
-        <p>${descVideosEsp[e].text}</p>
+        <h4 class="mic-bold">${descVideosEsp[e].title}</h4>
+        <p class="mic-light">${descVideosEsp[e].text}</p>
         </li>
         
         <div class="arrows">
