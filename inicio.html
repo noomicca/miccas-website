@@ -57,10 +57,12 @@
 
         <div class="title mic-sticky mic-black mic-fl-ce mic-fl-col">
             <a href="index.html">
+                <h2>Hey, soy</h2>
                 <div class="fancyTitle">
                     <h1>micca</h1>
                     <h1 aria-hidden="true">micca</h1>
                 </div>
+                <h2>Bienvenid@ a mi Portfolio :D</h2>
             </a>
             <a href="#main" class="mic-btn-round mic-fl-ce mic-arrow"
                 ><img src="svg/chevrons-down.svg" alt="Scroll Down"
@@ -75,8 +77,10 @@
         >
             <section id="quiensoy" class="mic-black mic-fl-ce mic-fl-col">
                 <div class="mic-fl-ce mic-fl-col">
-                    <h4 class="mic-bold">Mi nombre es</h4>
-                    <h3>Micaela Villamil</h3>
+                    <div class="subtitles">
+                        <h4 class="mic-bold">Mi nombre es</h4>
+                        <h3>Micaela Villamil</h3>
+                    </div>
                     <p>
                         Soy estudiante de la
                         <span class="mic-bold">
@@ -104,8 +108,11 @@
                     </div>
                 </div>
             </section>
+
             <section>
-                <h3>Habilidades</h3>
+                <div class="subtitles">
+                    <h3>Habilidades</h3>
+                </div>
                 <div class="skills mic-fl-ce mic-fl-wrap">
                     <a href="#ilustration" class="mic-btn-window mic-white">
                         <h4 class="windowTitle">Diseño</h4>
@@ -147,6 +154,7 @@
                     </a>
                 </div>
             </section>
+
             <section id="quehago" class="mic-fl-ce mic-fl-col">
                 <div>
                     <h3>Diseño Multimedia</h3>
@@ -158,8 +166,11 @@
                     </p>
                 </div>
             </section>
+
             <section id="ilustration">
-                <h3>ilustración</h3>
+                <div class="subtitles">
+                    <h3>ilustración</h3>
+                </div>
                 <div class="grid"></div>
                 <h4>¡Para más chequeá mi Instagram!</h4>
                 <a
@@ -168,100 +179,121 @@
                     >@noomicca</a
                 >
             </section>
+
             <section id="web">
-                <h3>Diseño Web</h3>
-                <h4>Sitios web que he diseñado y programado:</h4>
+                <div class="subtitles">
+                    <h3>Diseño Web</h3>
+                    <h4>Sitios web que he diseñado y programado:</h4>
+                </div>
                 <div id="webBody" class="mic-fl-ce"></div>
             </section>
-            <section id="audiovisual">
-                <h3>Audio Visual</h3>
-                <h4>Proyectos Audio-visuales que he hecho:</h4>
+
+            <section id="audiovisual" class="mic-fl-ce mic-fl-col">
+                <div class="subtitles">
+                    <h3>Audio Visual</h3>
+                    <h4>Proyectos Audio-visuales que he hecho:</h4>
+                </div>
 
                 <ul class="slider"></ul>
             </section>
-            <section id="contacto">
-                <div id="thankYouForm">
-                    <span>
-                        <h2>Mail enviado con éxito.</h2>
-                        <h3>¡Muchas gracias!</h3>
-                    </span>
-                </div>
-                <h3>Contactáme!</h3>
-                <h4>
-                    Podés conectar conmigo a través de cualquiera de mis redes
-                    sociales :)
-                </h4>
-                <form
-                    onsubmit="formEvent()"
-                    id="contactoForm"
-                    action="https://formsubmit.co/micaelavillamil200@gmail.com"
-                    method="post"
-                >
-                    <input
-                        type="text"
-                        name="name"
-                        title="name"
-                        placeholder="Nombre"
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="e-mail"
-                        required
-                    />
-                    <textarea
-                        required
-                        name="msg"
-                        id="msg"
-                        cols="30"
-                        rows="10"
-                        placeholder="Mensaje..."
-                    ></textarea>
 
-                    <button id="submitForm" type="submit" class="mic-black">
-                        Enviar
-                    </button>
-
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input
-                        type="hidden"
-                        name="_next"
-                        value="http://127.0.0.1:5500/inicio.html"
-                    />
-                </form>
+            <section id="contacto" class="mic-fl-ce mic-fl-col">
                 <div>
-                    <h4 id="time">00:00:00</h4>
-                    <p>Ciudad de la Costa, Uruguay</p>
+                    <div id="thankYouForm">
+                        <span>
+                            <h2>Mail enviado con éxito.</h2>
+                            <h3>¡Muchas gracias!</h3>
+                        </span>
+                    </div>
+                    <div class="subtitles">
+                        <h3>Contactáme!</h3>
+                        <h4>
+                            Podés conectar conmigo a través de cualquiera de mis
+                            redes sociales :)
+                        </h4>
+                    </div>
+                    <form
+                        onsubmit="formEvent()"
+                        id="contactoForm"
+                        action="https://formsubmit.co/micaelavillamil200@gmail.com"
+                        method="post"
+                    >
+                        <div class="inputForm mic-fl-ce mic-fl-col">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="Nombre" title="name" />
+                        </div>
+                        <div class="inputForm mic-fl-ce mic-fl-col">
+                            <label for="email">Email</label>
+                            <input
+                                title="email"
+                                type="email"
+                                name="Email"
+                                required
+                            />
+                        </div>
+                        <div class="textareaForm mic-fl-ce mic-fl-col">
+                            <label for="msg">Mensaje</label>
+                            <textarea
+                                required
+                                title="msg"
+                                name="Mensaje"
+                                id="msg"
+                                cols="30"
+                                rows="10"
+                            >
+                            </textarea>
+                        </div>
+
+                        <button id="submitForm" type="submit" class="mic-black">
+                            Enviar
+                        </button>
+
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input
+                            type="hidden"
+                            name="_next"
+                            value="http://127.0.0.1:5500/inicio.html"
+                        />
+                    </form>
+                    <div class="subtitles">
+                        <h4 id="time">00:00:00</h4>
+                        <p>Ciudad de la Costa, Uruguay</p>
+                    </div>
                 </div>
+
+                <footer class="mic-fl-ce">
+                    <div class="socials mic-fl-ce">
+                        <a
+                            class="mic-btn-round mic-fl-ce"
+                            href="https://www.instagram.com/noomicca/"
+                            target="_blank"
+                            rel="noopener"
+                            ><img
+                                src="svg/instagram-circle.svg"
+                                alt="Instagram link"
+                        /></a>
+                        <a
+                            class="mic-btn-round mic-fl-ce"
+                            href="https://www.youtube.com/channel/UCdwNruW4SB1picDh6IqDhlg"
+                            target="_blank"
+                            rel="noopener"
+                            ><img
+                                src="svg/youtube-circle.svg"
+                                alt="Youtube link"
+                        /></a>
+                        <a
+                            class="mic-btn-round mic-fl-ce"
+                            href="https://www.linkedin.com/in/miccaelavillamil/"
+                            target="_blank"
+                            rel="noopener"
+                            ><img
+                                src="svg/linkedin-circle.svg"
+                                alt="Linkedin link"
+                        /></a>
+                    </div>
+                    <p class="mic-light">micaelavillamil200@gmail.com</p>
+                </footer>
             </section>
-            <footer class="mic-fl-ce">
-                <div class="socials mic-fl-ce">
-                    <a
-                        class="mic-btn-round mic-fl-ce"
-                        href="https://www.instagram.com/noomicca/"
-                        target="_blank"
-                        rel="noopener"
-                        ><img
-                            src="svg/instagram-circle.svg"
-                            alt="Instagram link"
-                    /></a>
-                    <a
-                        class="mic-btn-round mic-fl-ce"
-                        href="https://www.youtube.com/channel/UCdwNruW4SB1picDh6IqDhlg"
-                        target="_blank"
-                        rel="noopener"
-                        ><img src="svg/youtube-circle.svg" alt="Youtube link"
-                    /></a>
-                    <a
-                        class="mic-btn-round mic-fl-ce"
-                        href="https://www.linkedin.com/in/miccaelavillamil/"
-                        target="_blank"
-                        rel="noopener"
-                        ><img src="svg/linkedin-circle.svg" alt="Linkedin link"
-                    /></a>
-                </div>
-                <p class="mic-light">micaelavillamil200@gmail.com</p>
-            </footer>
         </div>
     </body>
 

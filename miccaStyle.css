@@ -18,7 +18,7 @@ html {
     --teal: #397b7a;
     --purple: #6254a4;
     --darkpurple: #2f2d4e;
-    --gray: #282b31;
+    --gray: #1e201e;
     --black: #19140c;
     --white: #fbf0ed;
 }
@@ -38,15 +38,15 @@ header {
     padding: 2em 1.5em;
 }
 section {
-    padding: 2em 0;
+    padding: 1em;
     width: 100%;
+    min-height: 100vh;
     text-align: center;
 }
 footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: end !important;
     flex-direction: column;
 
     padding: 1em;
@@ -95,6 +95,9 @@ h3 {
     font-family: "Righteous", "Dosis", sans-serif;
     font-size: 3em;
 }
+h4 {
+    font-size: 1.5em;
+}
 p {
     padding: 0 3em;
     max-width: 500px;
@@ -110,29 +113,49 @@ form {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 1em;
     margin: auto;
-    max-width: 900px;
+    max-width: 650px;
+}
+form > div {
+    padding: 1.5em 0;
+}
+.inputForm {
+    width: 45%;
+}
+.textareaForm {
+    width: 100%;
+}
+label {
+    padding-left: 0.5em;
+    display: block;
+    width: 100%;
+    text-align: left;
 }
 textarea,
 input {
-    padding: 1em 2em;
-    margin: 0.2em 0;
-    margin-top: 2em;
     width: 100%;
-    height: 5em;
-
+    padding: 0.3em;
     color: var(--white);
     background-color: var(--black);
     outline: solid 1px var(--black);
     border: unset;
-    border-radius: 1em;
     border-bottom: solid 1px var(--white);
+    border-left: solid 1px var(--white);
 }
+input {
+    height: 2em;
+}
+textarea {
+    height: 6em;
+}
+
 textarea:focus,
 input:focus {
     border-bottom: solid 1px var(--purple);
+    border-left: solid 1px var(--purple);
 }
 button[type="submit"] {
     font-weight: 800;
@@ -168,6 +191,10 @@ button[type="submit"]:active {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.subtitles {
+    margin: 2em 0;
 }
 
 /*------SKILL------*/
@@ -299,122 +326,6 @@ button[type="submit"]:active {
     border: 1px solid linear-gradient(black, var(--darkpurple));
 }
 
-/*------GRID------*/
-
-.grid {
-    height: auto;
-    width: 100%;
-    padding: 2em 2vw;
-    gap: 1em;
-
-    position: relative;
-    display: flex;
-    overflow-y: scroll;
-}
-.col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-.post {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    background-color: var(--black);
-
-    box-shadow: 0.5em 0.5em 1em black;
-}
-.post > img {
-    width: 100%;
-}
-.overlay {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2em;
-    background: var(--black);
-    padding: 1em;
-    font-size: 0.7em;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    transition: 0s;
-}
-.overlay p {
-    text-overflow: ellipsis;
-    margin: unset;
-    overflow: hidden;
-}
-.post:hover .overlay,
-.post:active .overlay {
-    display: flex;
-    cursor: pointer;
-}
-
-/*------SLIDER------*/
-
-ul.slider {
-    position: relative;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-ul.slider li {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-ul.slider li iframe {
-    aspect-ratio: 16/9;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    margin: 1em auto;
-}
-.arrows {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    margin: 1em auto;
-}
-#rightArrow {
-    border-radius: 100%;
-    display: block;
-    z-index: 1;
-}
-#leftArrow {
-    z-index: 1;
-    border-radius: 100%;
-    display: block;
-}
-#leftArrow:hover,
-#rightArrow:hover,
-#leftArrow:active,
-#rightArrow:active {
-    background-color: var(--purple);
-    border-radius: 100%;
-}
-.locked,
-.locked:hover,
-.locked:active {
-    background-color: var(--gray);
-    opacity: 50%;
-}
-
 /*------GENERAL CLASSES------*/
 .mic-bold {
     font-weight: 700;
@@ -479,6 +390,10 @@ ul.slider li iframe {
 .mic-white {
     background-color: var(--white);
     color: var(--black);
+}
+.mic-gray {
+    background-color: var(--gray);
+    color: var(--white);
 }
 .mic-black {
     background-color: var(--black);
@@ -552,6 +467,22 @@ ul.slider li iframe {
 }
 
 /*------SPECIFICS------*/
+#contact,
+#contacto {
+    margin: unset;
+}
+#contact > *,
+#contacto > * {
+    width: 100%;
+}
+
+.break {
+    width: 60vw;
+    height: 2px;
+    border-top: dashed 2px var(--white);
+    margin-top: 2em;
+    margin-bottom: 12em;
+}
 .mic-arrow {
     position: absolute;
     bottom: 10%;
@@ -587,21 +518,140 @@ ul.slider li iframe {
     align-items: center;
     justify-content: center;
 
-    height: 25vh;
-    width: 20em;
+    height: 25%;
+    width: 50%;
     background-color: var(--purple);
     opacity: 1;
 
     position: fixed;
     z-index: 2;
     bottom: 37.5%;
-    left: calc((100vw - 20em) / 2);
+    left: calc((100vw - 50) / 2);
     border-radius: 2em;
 }
 
 #language:hover > h3,
 #language:active > h3 {
     color: var(--purple);
+}
+
+/*------GRID------*/
+
+.grid {
+    height: auto;
+    width: 100%;
+    padding: 2em 2vw;
+    gap: 1em;
+
+    position: relative;
+    display: flex;
+    overflow-y: scroll;
+}
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.post {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--black);
+
+    box-shadow: 0.5em 0.5em 1em black;
+}
+.post > img {
+    width: 100%;
+}
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2em;
+    background: var(--black);
+    padding: 1em;
+    font-size: 0.7em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: 0s;
+}
+.overlay h4 {
+    font-size: 1em;
+}
+.overlay p {
+    text-overflow: ellipsis;
+    margin: unset;
+    overflow: hidden;
+}
+.post:hover .overlay,
+.post:active .overlay {
+    display: flex;
+    cursor: pointer;
+}
+
+/*------SLIDER------*/
+
+ul.slider {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ul.slider li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+ul.slider li iframe {
+    aspect-ratio: 16/9;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1em auto;
+}
+.arrows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1em auto;
+}
+#rightArrow {
+    border-radius: 100%;
+    display: block;
+    z-index: 1;
+}
+#leftArrow {
+    z-index: 1;
+    border-radius: 100%;
+    display: block;
+}
+#leftArrow:hover,
+#rightArrow:hover,
+#leftArrow:active,
+#rightArrow:active {
+    background-color: var(--purple);
+    border-radius: 100%;
+}
+.locked,
+.locked:hover,
+.locked:active {
+    background-color: var(--gray);
+    opacity: 50%;
 }
 
 /*------WEB SECTION------*/
@@ -649,18 +699,20 @@ ul.slider li iframe {
 .title > * {
     animation: blur-in 0.2s linear both;
 }
+
 .title h2:nth-child(1) {
     font-size: 1.3em;
     position: absolute;
-    left: calc(51vw - 8em);
-    top: 43.8%;
+    top: 5%;
+    left: calc(50% - 8em);
     color: var(--mint);
 }
 .title h2:nth-child(3) {
     font-size: 1.3em;
+    text-align: right;
     position: absolute;
-    right: calc(50vw - 8em);
-    top: 56%;
+    top: 95%;
+    right: calc(50% - 8em);
     color: var(--purple);
 }
 .fancyTitle {
@@ -844,6 +896,9 @@ ul.slider li iframe {
         opacity: 0;
         transition: 0.5s;
     }
+    .overlay h4 {
+        font-size: 1.5em;
+    }
     .post:hover .overlay,
     .post:active .overlay {
         opacity: 0.8;
@@ -858,17 +913,7 @@ ul.slider li iframe {
     .title {
         font-size: 1.5em;
     }
-    .title h2:nth-child(1) {
-        top: calc(44% - 1em);
-        left: calc(50% - 8em);
 
-        color: var(--mint);
-    }
-    .title h2:nth-child(3) {
-        top: calc(56% + 1em);
-
-        color: var(--purple);
-    }
     p {
         font-size: 1.15em;
         margin: auto;
@@ -883,11 +928,8 @@ ul.slider li iframe {
     #quiensoy > div,
     #whoami > div {
         width: 45%;
-        text-align: left;
+        text-align: justify;
         font-size: 1.1em;
-    }
-    h4 {
-        font-size: 1.5em;
     }
 
     #quiensoy,
