@@ -154,7 +154,7 @@ const descIlustrationsEng = [
         text: "Starting from an Instagram challenge, together with a friend we designed two monsters that live under our beds.",
     },
     {
-        title: "niñO o niñA (Bor or Girl)",
+        title: "niñO o niñA (Boy or Girl)",
         text: "Entry to the Ads for Good contest, held by Starbucks in 2022",
     },
     {
