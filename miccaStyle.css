@@ -545,7 +545,7 @@ button[type="submit"]:active {
 
     position: relative;
     display: flex;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 .col {
     flex: 1;
@@ -657,8 +657,9 @@ ul.slider li iframe {
 /*------WEB SECTION------*/
 
 #webBody {
-    margin: 3em 1em;
+    max-width: 1500px;
     margin-top: unset;
+    margin: auto;
     flex-wrap: wrap;
 }
 #webBody .mic-webCard:first-child {
