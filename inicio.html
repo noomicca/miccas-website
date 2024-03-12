@@ -12,29 +12,37 @@
 
     <body id="español">
         <nav class="mic-nav-invisible mic-fl-ri mic-fl-col mic-fixed">
-            <a href="#quiensoy" class="mic-mainSections mic-white"
+            <a
+                href="#quiensoy"
+                class="mic-mainSections mic-white mic-btn-window"
                 ><p>Quién?</p></a
             >
-            <a href="#quehago" class="mic-mainSections mic-white"
+            <a href="#quehago" class="mic-mainSections mic-white mic-btn-window"
                 ><p>Qué?</p></a
             >
-            <a href="#ilustration" class="mic-secSections mic-white"
+            <a
+                href="#ilustration"
+                class="mic-secSections mic-white mic-btn-window"
                 ><p>Ilustración</p></a
             >
-            <a href="#web" class="mic-secSections mic-white"
+            <a href="#web" class="mic-secSections mic-white mic-btn-window"
                 ><p>Diseño Web</p></a
             >
-            <a href="#audiovisual" class="mic-secSections mic-white"
+            <a
+                href="#audiovisual"
+                class="mic-secSections mic-white mic-btn-window"
                 ><p>Audio-Visual</p></a
             >
 
-            <a href="#contacto" class="mic-mainSections mic-white"
+            <a
+                href="#contacto"
+                class="mic-mainSections mic-white mic-btn-window"
                 ><p>Contáctame!</p></a
             >
             <a
                 href="ResumeESPMicca´s Portfolio .pdf"
                 download="Micaela_Villamil_Currículum"
-                class="mic-mainSections mic-white"
+                class="mic-mainSections mic-white mic-btn-window"
                 >Currículum
                 <img src="svg/download.svg" alt="Descargar Currículum Vitae" />
             </a>
@@ -67,12 +75,26 @@
         >
             <section id="quiensoy" class="mic-black mic-fl-ce mic-fl-col">
                 <div class="mic-fl-ce mic-fl-col">
-                    <p class="mic-bold">Mi nombre es</p>
+                    <h4 class="mic-bold">Mi nombre es</h4>
                     <h3>Micaela Villamil</h3>
-                    <p class="mic-bold">
-                        Soy estudiante de la Licenciatura en Diseño Multimedia,
-                        actualmente cursando mi tercer año, en la Universidad
+                    <p>
+                        Soy estudiante de la
+                        <span class="mic-bold">
+                            Licenciatura en Diseño Multimedia</span
+                        >, actualmente cursando mi tercer año, en la Universidad
                         ORT Uruguay.
+                    </p>
+                    <p>
+                        Mis trabajos cubren una amplia gama de necesidades,
+                        desde <span class="mic-bold">diseñar</span> y
+                        <span class="mic-bold">programar</span> páginas web,
+                        <span class="mic-bold">grabar</span> y
+                        <span class="mic-bold">editar</span> piezas
+                        audiovisuales o encargos de
+                        <span class="mic-bold">retratos</span> e
+                        <span class="mic-bold">ilustraciónes</span>
+                        personalizadas, sea lo que necesites, puedo adaptarme
+                        rapidamente a nuevos medios.
                     </p>
                 </div>
                 <div class="me">
@@ -80,15 +102,6 @@
                         <div class="tails"></div>
                         <div class="heads"></div>
                     </div>
-                </div>
-                <div class="mic-fl-ce mic-fl-col">
-                    <p>
-                        Mis trabajos cubren una amplia gama de necesidades,
-                        desde diseñar y programar páginas web, grabar y editar
-                        piezas audiovisuales o encargos de retratos e
-                        ilustraciónes personalizadas, sea lo que necesites,
-                        puedo adaptarme rapidamente a nuevos medios.
-                    </p>
                 </div>
             </section>
             <section>
@@ -134,19 +147,21 @@
                     </a>
                 </div>
             </section>
-            <section id="quehago">
-                <h3>Diseño Multimedia</h3>
-                <p>
-                    Ser diseñador multimedia implica saber adaptarse, perder el
-                    miedo a los cambios e innovar en formas nuevas de
-                    comunicación, transformando el mensaje a través del diseño
-                    hacia los nuevos medios.
-                </p>
+            <section id="quehago" class="mic-fl-ce mic-fl-col">
+                <div>
+                    <h3>Diseño Multimedia</h3>
+                    <p>
+                        Ser diseñador multimedia implica saber adaptarse, perder
+                        el miedo a los cambios e innovar en formas nuevas de
+                        comunicación, transformando el mensaje a través del
+                        diseño hacia los nuevos medios.
+                    </p>
+                </div>
             </section>
             <section id="ilustration">
                 <h3>ilustración</h3>
                 <div class="grid"></div>
-                <p>¡Para más chequeá mi Instagram!</p>
+                <h4>¡Para más chequeá mi Instagram!</h4>
                 <a
                     href="https://www.instagram.com/noomicca/"
                     class="mic-bold mic-black"
@@ -155,12 +170,12 @@
             </section>
             <section id="web">
                 <h3>Diseño Web</h3>
-                <p>Sitios web que he diseñado y programado:</p>
+                <h4>Sitios web que he diseñado y programado:</h4>
                 <div id="webBody" class="mic-fl-ce"></div>
             </section>
             <section id="audiovisual">
                 <h3>Audio Visual</h3>
-                <p>Proyectos Audio-visuales que he hecho:</p>
+                <h4>Proyectos Audio-visuales que he hecho:</h4>
 
                 <ul class="slider"></ul>
             </section>
@@ -172,10 +187,10 @@
                     </span>
                 </div>
                 <h3>Contactáme!</h3>
-                <p>
+                <h4>
                     Podés conectar conmigo a través de cualquiera de mis redes
                     sociales :)
-                </p>
+                </h4>
                 <form
                     onsubmit="formEvent()"
                     id="contactoForm"

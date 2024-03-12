@@ -12,27 +12,35 @@
 
     <body id="english">
         <nav class="mic-fl-ri mic-fl-col mic-fixed mic-nav-invisible">
-            <a href="#whoami" class="mic-mainSections mic-white"><p>Who?</p></a>
-            <a href="#whatdoido" class="mic-mainSections mic-white"
+            <a href="#whoami" class="mic-mainSections mic-white mic-btn-window"
+                ><p>Who?</p></a
+            >
+            <a
+                href="#whatdoido"
+                class="mic-mainSections mic-white mic-btn-window"
                 ><p>What?</p></a
             >
-            <a href="#ilustration" class="mic-secSections mic-white"
+            <a
+                href="#ilustration"
+                class="mic-secSections mic-white mic-btn-window"
                 ><p>Ilustration</p></a
             >
-            <a href="#web" class="mic-secSections mic-white"
+            <a href="#web" class="mic-secSections mic-white mic-btn-window"
                 ><p>Web Design</p></a
             >
-            <a href="#audiovisual" class="mic-secSections mic-white"
+            <a
+                href="#audiovisual"
+                class="mic-secSections mic-white mic-btn-window"
                 ><p>Audio-Visual</p></a
             >
 
-            <a href="#contact" class="mic-mainSections mic-white"
+            <a href="#contact" class="mic-mainSections mic-white mic-btn-window"
                 ><p>Contact me!</p></a
             >
             <a
                 href="ResumeENGMesa de trabajo 1.pdf"
                 download="Micaela_Villamil_Resume"
-                class="mic-mainSections mic-white"
+                class="mic-mainSections mic-white mic-btn-window"
                 >Resume
                 <img src="svg/download.svg" alt="Download Resume" />
             </a>
@@ -65,11 +73,27 @@
         >
             <section id="whoami" class="mic-black mic-fl-ce mic-fl-col">
                 <div class="mic-fl-ce mic-fl-col">
-                    <p class="mic-bold">My name is</p>
+                    <h4 class="mic-bold">My name is</h4>
                     <h3>Micaela Villamil</h3>
-                    <p class="mic-bold">
-                        I'm a Multimedia Bachelor's student in my third year at
-                        ORT University, Uruguay.
+                    <p>
+                        I'm a
+                        <span class="mic-bold"
+                            >Multimedia Bachelor's student</span
+                        >
+                        in my third year at ORT University, Uruguay.
+                    </p>
+                    <p>
+                        I can cover a
+                        <span class="mic-bold">wide range of mediums</span>,
+                        from working with website
+                        <span class="mic-bold">frontend coding</span> to
+                        <span class="mic-bold">audio-visual pieces</span> or
+                        comissions of
+                        <span class="mic-bold"
+                            >custom portraits and ilustration</span
+                        >
+                        , I can adapt myself quickly to new needs you might
+                        have.
                     </p>
                 </div>
                 <div class="me">
@@ -77,14 +101,6 @@
                         <div class="tails"></div>
                         <div class="heads"></div>
                     </div>
-                </div>
-                <div class="mic-fl-ce mic-fl-col">
-                    <p>
-                        I can cover a wide range of mediums, from working with
-                        website frontend coding to audio-visual pieces or
-                        comissions of custom portraits and ilustration, I can
-                        adapt myself quickly to new needs you might have.
-                    </p>
                 </div>
             </section>
             <section>
@@ -130,19 +146,21 @@
                     </a>
                 </div>
             </section>
-            <section id="whatdoido">
-                <h3>Multimedia Design</h3>
-                <p>
-                    Being a multimedia designer means knowing how to adapt, not
-                    having fear of change, innovate in new ways of communication
-                    and learn to transform the message through design into new
-                    media.
-                </p>
+            <section id="whatdoido" class="mic-fl-ce mic-fl-col">
+                <div>
+                    <h3>Multimedia Design</h3>
+                    <p>
+                        Being a multimedia designer means knowing how to adapt,
+                        not having fear of change, innovate in new ways of
+                        communication and learn to transform the message through
+                        design into new media.
+                    </p>
+                </div>
             </section>
             <section id="ilustration">
                 <h3>ilustration</h3>
                 <div class="grid"></div>
-                <p>For more check out my Instagram!</p>
+                <h4>For more check out my Instagram!</h4>
                 <a
                     href="https://www.instagram.com/noomicca/"
                     class="mic-bold mic-black"
@@ -151,12 +169,16 @@
             </section>
             <section id="web">
                 <h3>Web Design</h3>
-                <p>Websites that I have designed and codded:</p>
+                <h4 class="mic-bold">
+                    Websites that I have designed and codded:
+                </h4>
                 <div id="webBody" class="mic-fl-ce"></div>
             </section>
             <section id="audiovisual">
                 <h3>Audio Visual</h3>
-                <p>Audio-visual projects that I have done:</p>
+                <h4 class="mic-bold">
+                    Audio-visual projects that I have done:
+                </h4>
 
                 <ul class="slider"></ul>
             </section>
@@ -168,7 +190,9 @@
                     </span>
                 </div>
                 <h3>Contact me!</h3>
-                <p>You can connect with me through any of my social media :)</p>
+                <h4>
+                    You can connect with me through any of my social media :)
+                </h4>
                 <form
                     onsubmit="formEvent()"
                     id="contactForm"

@@ -41,7 +41,6 @@ section {
     padding: 2em 0;
     width: 100%;
     text-align: center;
-    margin-bottom: 10em;
 }
 footer {
     display: flex;
@@ -50,20 +49,20 @@ footer {
     align-items: baseline;
     flex-direction: column;
 
-    padding: 0 1em;
+    padding: 1em;
+    padding-bottom: 12em;
 }
 footer > * {
     margin: 1em;
 }
 
-#contact h4,
-#contacto h4 {
+#time {
     font-size: 3em;
 }
 nav {
     width: 100%;
     height: 100%;
-    padding: 15vh 1em;
+    padding: 25% 1em;
     background: linear-gradient(90deg, transparent 0%, var(--black) 100%);
 
     justify-content: start !important;
@@ -95,7 +94,6 @@ h2 {
 h3 {
     font-family: "Righteous", "Dosis", sans-serif;
     font-size: 3em;
-    padding: 0.3em 0;
 }
 p {
     padding: 0 3em;
@@ -531,18 +529,21 @@ ul.slider li iframe {
 }
 
 .mic-mainSections {
+    width: auto;
     border: solid 3px var(--purple);
     border-top: 12px solid var(--purple);
     margin: 0.5em;
-    padding: 0.5em 1em;
+    padding: 0.5em 1.3em;
 }
 .mic-secSections {
     border: solid 3px var(--teal);
     border-top: 12px solid var(--teal);
+    width: auto;
 
     margin: 0.5em;
-    padding: 0.5em 1em;
+    padding: 0.5em 1.3em;
 }
+
 .mic-slideInLeft {
     animation: slide-in-left 0.2s linear both;
 }
@@ -554,7 +555,7 @@ ul.slider li iframe {
 .mic-arrow {
     position: absolute;
     bottom: 10%;
-    animation: vibrateUpDown 1s linear both infinite;
+    animation: vibrateUpDown 1s linear both infinite, blur-in 0.2s linear both !important;
 }
 .mic-arrow:active,
 .mic-arrow:hover {
@@ -564,6 +565,15 @@ ul.slider li iframe {
     background-color: var(--black);
     border: unset;
     border-radius: 100%;
+    animation: unset;
+}
+#menu:hover {
+    outline: 2px solid var(--purple);
+    background-color: var(--purple);
+}
+#menu:active {
+    outline: 2px solid var(--black);
+    background-color: var(--black);
 }
 #thankYouForm > span {
     position: relative;
@@ -642,8 +652,8 @@ ul.slider li iframe {
 .title h2:nth-child(1) {
     font-size: 1.3em;
     position: absolute;
-    left: calc(50vw - 8em);
-    top: 44%;
+    left: calc(51vw - 8em);
+    top: 43.8%;
     color: var(--mint);
 }
 .title h2:nth-child(3) {
@@ -651,6 +661,7 @@ ul.slider li iframe {
     position: absolute;
     right: calc(50vw - 8em);
     top: 56%;
+    color: var(--purple);
 }
 .fancyTitle {
     height: 8em;
@@ -799,8 +810,8 @@ ul.slider li iframe {
     #webBody .mic-webCard:first-child {
         margin-top: 4em;
     }
-    .content {
-        max-width: 1500px;
+    h3 {
+        font-size: 5em;
     }
     nav {
         flex-direction: row !important;
@@ -840,18 +851,21 @@ ul.slider li iframe {
     }
     section {
         padding: 1em 3em;
+        margin-bottom: 30em;
+        min-height: 80vh;
+        text-align: center;
     }
     .title {
         font-size: 1.5em;
     }
     .title h2:nth-child(1) {
-        top: calc(44vh - 1em);
-        left: calc(50vw - 8em);
+        top: calc(44% - 1em);
+        left: calc(50% - 8em);
 
         color: var(--mint);
     }
     .title h2:nth-child(3) {
-        top: calc(56vh + 1em);
+        top: calc(56% + 1em);
 
         color: var(--purple);
     }
@@ -861,27 +875,27 @@ ul.slider li iframe {
         max-width: 500px;
         padding: 0 1em;
     }
+
+    #quiensoy p,
+    #whoami p {
+        max-width: 800px;
+    }
     #quiensoy > div,
     #whoami > div {
         width: 45%;
+        text-align: left;
+        font-size: 1.1em;
     }
-    #quiensoy,
-    #whoami {
-        max-width: 1200px;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: start;
-        align-items: start;
-    }
-    #quiensoy > div:last-child {
-        margin-top: -22%;
+    h4 {
+        font-size: 1.5em;
     }
 
-    #whoami > div:last-child {
-        margin-top: -25%;
-    }
-    #quiensoy > div:first-child,
-    #whoami > div:first-child {
-        margin-top: 11%;
+    #quiensoy,
+    #whoami {
+        max-width: 1500px;
+        max-height: 90vh;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
