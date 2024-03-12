@@ -511,7 +511,17 @@ button[type="submit"]:active {
     display: inline-block;
     cursor: pointer;
 }
+#thankYouForm > .windowTitle {
+    font-size: 0.8em;
+}
+#thankYouForm h3 {
+    font-family: "Dosis";
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
 #thankYouForm {
+    border-top: 1.8em solid var(--purple);
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -520,14 +530,12 @@ button[type="submit"]:active {
 
     height: 25%;
     width: 50%;
-    background-color: var(--purple);
     opacity: 1;
 
     position: fixed;
     z-index: 2;
     bottom: 37.5%;
-    left: calc((100vw - 50) / 2);
-    border-radius: 2em;
+    left: calc((100vw - 50%) / 2);
 }
 
 #language:hover > h3,
@@ -940,5 +948,20 @@ ul.slider li iframe {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+    }
+
+    #thankYouForm > .windowTitle {
+        font-size: 1em;
+    }
+    #thankYouForm h3 {
+        font-size: 2em;
+    }
+
+    #thankYouForm {
+        border-top: 2em solid var(--purple);
+
+        height: 25%;
+        width: 33%;
+        left: calc((100vw - 33%) / 2);
     }
 }
