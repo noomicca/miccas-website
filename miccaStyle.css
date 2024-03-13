@@ -179,6 +179,12 @@ button[type="submit"]:active {
 
 /*------CONTAINERS------*/
 
+.note {
+    display: inline-block;
+    padding: 0.3em 1em;
+    border: 1px solid var(--white);
+    margin: 0.5em;
+}
 .content {
     box-shadow: 0 -0.3em 2em black;
     border-radius: 2em 2em 0 0;
@@ -678,7 +684,7 @@ ul.slider li iframe {
     height: 10em;
     width: 100%;
     max-width: 450px;
-    margin: 4em;
+    margin: 4em 2em;
 }
 .mic-webCard > a {
     position: absolute;
