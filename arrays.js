@@ -93,6 +93,8 @@ const ilustrations = [
     { img: "imgs/Two monsters under ur bed.png" },
     { img: "imgs/TRANS-RIGHTS.png" },
     { img: "imgs/knight and monarch.png" },
+    { img: "imgs/Tefi Fairy.png" },
+    { img: "imgs/sowfi fairy.png" },
     { img: "imgs/Stickers.png" },
 ];
 
@@ -123,6 +125,14 @@ const descIlustrationsEsp = [
     },
     {
         title: "El caballero y su Monarca ",
+        text: "",
+    },
+    {
+        title: "Tefi el Hada ",
+        text: "",
+    },
+    {
+        title: "Sofi el Hada",
         text: "",
     },
     {
@@ -159,6 +169,14 @@ const descIlustrationsEng = [
     },
     {
         title: "The Knight and his Monarch ",
+        text: "",
+    },
+    {
+        title: "Tefi Fairy",
+        text: "",
+    },
+    {
+        title: "Sofi Fairy",
         text: "",
     },
     {
