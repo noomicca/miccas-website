@@ -605,7 +605,6 @@ button[type="submit"]:active {
 .post:hover .overlay,
 .post:active .overlay {
     display: flex;
-    cursor: pointer;
 }
 
 /*------SLIDER------*/
