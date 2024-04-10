@@ -60,8 +60,10 @@ footer > * {
     font-size: 3em;
 }
 nav {
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
     width: 100%;
-    height: 100%;
     padding: 25% 1em;
     background: linear-gradient(90deg, transparent 0%, var(--black) 100%);
 
@@ -83,7 +85,7 @@ a {
     text-decoration: none;
 }
 h1 {
-    font-size: 8em;
+    font-size: 6em;
 
     text-transform: lowercase;
     font-family: "Righteous", "Dosis", sans-serif;
@@ -498,8 +500,12 @@ button[type="submit"]:active {
 .mic-arrow:hover {
     animation: vibrateUpDown 1s linear both infinite;
 }
+.mic-arrow > img {
+    width: 35px;
+}
 #menu {
     background-color: var(--black);
+    box-shadow: 0px 2px 1em black;
     border: unset;
     border-radius: 100%;
     animation: unset;
@@ -715,14 +721,14 @@ ul.slider li iframe {
 }
 
 .title h2:nth-child(1) {
-    font-size: 1.3em;
+    font-size: 1em;
     position: absolute;
     top: 5%;
     left: calc(50% - 8em);
     color: var(--mint);
 }
 .title h2:nth-child(3) {
-    font-size: 1.3em;
+    font-size: 1em;
     text-align: right;
     position: absolute;
     top: 95%;
@@ -730,7 +736,7 @@ ul.slider li iframe {
     color: var(--purple);
 }
 .fancyTitle {
-    height: 8em;
+    height: 6em;
     width: 0;
 
     position: relative;
@@ -873,6 +879,9 @@ ul.slider li iframe {
 /*------MEDIA BREAKPOINTS------*/
 
 @media only screen and (min-width: 992px) {
+    .mic-arrow > img {
+        width: 50px;
+    }
     #webBody .mic-webCard:first-child {
         margin-top: 4em;
     }
